@@ -1701,9 +1701,208 @@
       .cta-section__btns { flex-direction: column; align-items: stretch; }
       .cta-section__btns .btn { justify-content: center; }
     }
+
+    /* ═══════════════════════════════════════════════
+       SabiData — une identité plus chaleureuse et éditoriale
+       ═══════════════════════════════════════════════ */
+    :root {
+      --bg: #fbf7ef;
+      --surface: #fffdf8;
+      --surface-hi: #f4ecdd;
+      --border: #e8decd;
+      --border-soft: rgba(71, 57, 37,  0.1);
+      --primary: #c45b32;
+      --primary-soft: rgba(196, 91, 50, 0.11);
+      --green: #39745a;
+      --green-soft: rgba(57, 116, 90, 0.11);
+      --red: #bf4b42;
+      --red-soft: rgba(191, 75, 66, 0.1);
+      --blue: #52758a;
+      --blue-soft: rgba(82, 117, 138, 0.11);
+      --text: #29271f;
+      --text-sec: #706b60;
+      --text-muted: #918a7d;
+      --radius-card: 24px;
+      --radius-btn: 999px;
+      --font-display: 'Bricolage Grotesque', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      background-image: radial-gradient(rgba(119, 92, 54, .07) .7px, transparent .7px);
+      background-size: 18px 18px;
+    }
+    .section { padding: 112px 0; }
+    .navbar {
+      background: rgba(251, 247, 239, .9);
+      border-bottom-color: rgba(71, 57, 37, .12);
+      box-shadow: 0 8px 30px rgba(65, 48, 24, .04);
+    }
+    .navbar__logo { color: var(--text); }
+    .navbar__logo-icon {
+      background: var(--text); color: #f8e7c6; border-radius: 13px;
+      box-shadow: 0 5px 12px rgba(41, 39, 31, .15);
+    }
+    .navbar__links { gap: 24px; }
+    .navbar__links a { color: #706b60; }
+    .navbar__links a:hover { color: var(--primary); }
+    .btn--primary { color: #fffaf2; box-shadow: 0 8px 20px rgba(196,91,50,.22); }
+    .btn--primary:hover { box-shadow: 0 12px 26px rgba(196,91,50,.3); }
+    .btn--outline { border-color: #d9cebc; }
+    .btn--outline:hover { background: #fffdf8; }
+
+    .hero {
+      min-height: 790px;
+      background: linear-gradient(112deg, #fbf7ef 0%, #fbf7ef 53%, #f2e7d4 100%);
+    }
+    .hero__grid {
+      opacity: .32;
+      background-image: radial-gradient(rgba(91, 74, 47, .13) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(90deg, #000, transparent 78%);
+    }
+    .hero__blob { filter: blur(65px); opacity: .23; }
+    .hero__blob--1 { background: radial-gradient(circle, #e4a24f, transparent); }
+    .hero__blob--2 { background: radial-gradient(circle, #b7c4a2, transparent); }
+    .hero__blob--3 { background: radial-gradient(circle, #d98b68, transparent); }
+    .hero__content { gap: 48px; padding-top: 110px; }
+    .hero__badge { background: rgba(255,253,248,.78); border-color: #e6d7c0; color: #8b542c; }
+    .hero__badge-dot { background: #63805f; }
+    .hero__title { font-size: clamp(48px, 6.4vw, 78px); letter-spacing: -.055em; line-height: 1.01; }
+    .hero__title span { color: var(--primary); }
+    .hero__sub { color: #686357; max-width: 510px; font-size: 17px; }
+    .hero__lang-pill { background: rgba(255,253,248,.78); border-color: #e6d7c0; color: #655e51; }
+    .hero__phone {
+      background: #e8ddca; border-color: #d6c7af;
+      box-shadow: 0 0 0 8px rgba(255,253,248,.64), 0 34px 75px rgba(85,61,30,.2);
+    }
+    .phone__notch { background: #171a20; }
+    .phone__screen { background: #101621; }
+    .hero__stat-card { background: #fffdf8; border-color: #e7ddce; color: #706b60; box-shadow: 0 10px 26px rgba(65,48,24,.1); }
+    .hero__stat-card strong { color: var(--primary); }
+
+    .stats-banner { background: #29271f; border-color: #29271f; color: #fffaf2; }
+    .stats-banner__item { border-color: rgba(255,255,255,.13); }
+    .stats-banner__num { color: #e7a75b; }
+    .stats-banner__label { color: #d3cbbd; }
+    .section-title { letter-spacing: -.045em; }
+    .section-label { color: #a84d2d; }
+    .section-sub { color: #706b60; }
+    .card, .feature-card, .platform-card, .lang-card, .gamif-card,
+    .leaderboard-mock, .tech-card, .about__quote, .about__value, .team-card {
+      background: rgba(255,253,248,.9);
+      border-color: #e8decd;
+      box-shadow: 0 10px 30px rgba(65,48,24,.045);
+    }
+    .feature-card:hover, .platform-card:hover, .lang-card:hover, .team-card:hover {
+      border-color: rgba(196,91,50,.35);
+      box-shadow: 0 18px 38px rgba(65,48,24,.1);
+    }
+    .feature-card::before { height: 4px; }
+    .feature-card:hover::before, .team-card:hover::before { opacity: 1; }
+    .recording-mock { background: #fffdf8; border-color: #e8decd; box-shadow: 0 18px 44px rgba(65,48,24,.09); }
+    .rec-phrase { color: var(--text); }
+    .admin-mock { background: #f4ecdd; border-color: #e1d5c2; }
+    .admin-kpi, .admin-table { background: #fffdf8; }
+    .admin-topbar, .admin-sidebar { background: #f7f0e4; }
+    .lb-header { border-color: var(--border); }
+    .lb-row--me { background: var(--primary-soft); }
+    .team-card__avatar-fallback { background: linear-gradient(135deg, #f4ecdd, #eadac1); border-style: solid; }
+    .team-card__tag { background: #f4ecdd; border-color: #e8decd; color: #706b60; }
+    .team-social-btn { background: #f4ecdd; border-color: #e8decd; color: var(--text); }
+    .cta-section { background: #efe3cf; border-color: #e4d5bd; }
+    .cta-section::before { background: radial-gradient(ellipse, rgba(196,91,50,.13) 0%, transparent 70%); }
+    .footer { background: #29271f; border-color: #29271f; color: #fffaf2; }
+    .footer__brand-desc, .footer__link, .footer__bottom { color: #c6beaf; }
+    .footer__col-title { color: #e1a45c; }
+    .footer__link:hover { color: #f2b878; }
+    .footer__divider { border-color: rgba(255,255,255,.15); }
+    .footer__lang { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
+    .mobile-menu { background: #fbf7ef; }
+    .mobile-menu a { border-color: #e8decd; }
+    .mobile-close { background: #f4ecdd; border-color: #e8decd; color: var(--text); }
+    .fade-up { transform: translateY(18px); }
+    @media (max-width: 860px) {
+      .hero { min-height: auto; }
+      .hero__content { padding: 110px 0 72px; }
+      .hero__title { font-size: clamp(46px, 11vw, 68px); }
+      .section { padding: 82px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .fade-up { opacity: 1; transform: none; }
+    }
+
+    /* Icônes vectorielles : traits uniformes, sans mélange d'emojis. */
+    .icon {
+      display: inline-block;
+      width: 1.15em;
+      height: 1.15em;
+      flex: 0 0 auto;
+      vertical-align: -.2em;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .feature-icon, .gamif-card__icon, .about__value-icon, .platform-card__icon,
+    .tech-card__icon, .timeline-dot, .lang-flag {
+      display: grid;
+      place-items: center;
+    }
+    .feature-icon .icon, .gamif-card__icon .icon { width: 25px; height: 25px; }
+    .platform-card__icon .icon { width: 34px; height: 34px; }
+    .about__value-icon .icon { width: 23px; height: 23px; }
+    .timeline-dot .icon { width: 16px; height: 16px; }
+    .lang-flag {
+      width: 48px; height: 48px; border-radius: 16px;
+      color: var(--primary); background: var(--primary-soft);
+    }
+    .lang-flag .icon { width: 25px; height: 25px; }
+    .tech-card__icon { color: var(--primary); }
+    .tech-card__icon .icon { width: 30px; height: 30px; }
+    .platform-card__feature-dot .icon { width: 12px; height: 12px; stroke-width: 2.4; }
+    .admin-nav-icon .icon { width: 16px; height: 16px; }
+    .pscreen__action-icon .icon { width: 20px; height: 20px; }
+    .pscreen__row-icon .icon { width: 15px; height: 15px; }
+    .lb-header .icon { color: var(--primary); margin-right: 5px; }
+    .lang-rarity .icon { width: 12px; height: 12px; fill: currentColor; }
+    .team-card__avatar-fallback { letter-spacing: .02em; }
   </style>
 </head>
 <body>
+
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute; overflow:hidden">
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8m-8 4h8"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><path d="M3 17a13 13 0 0 1 18 0M6.5 20.5a8 8 0 0 1 11 0M10 24a3 3 0 0 1 4 0" transform="translate(0 -3)"/><path d="M12 3v8"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></symbol>
+    <symbol id="i-money" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M7 6V4h13M12 10a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5m0 14h17"/><path d="m7 15 4-4 3 2 6-7"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m6-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6-7a4 4 0 0 1 0 8m2 3a4 4 0 0 1 3 4v2"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18m-7 0h14M5 7h14M7 7l-4 7h8L7 7Zm10 0-4 7h8l-4-7Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18m0-18a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-10-2 2-3 4-3 6-2-1-3-3-3-5-3 3-5 6-5 9a8 8 0 0 0 8 7Z"/><path d="M12 22a4 4 0 0 0 4-4c0-2-2-4-3-5-1 2-2 3-4 4a4 4 0 0 0 3 5Z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4Zm0 2H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m3 8 5 4 4-7 4 7 5-4-2 11H5L3 8Z"/><path d="M5 22h14"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2.3h6c0-1.1.4-1.8 1-2.3A7 7 0 0 0 12 2Z"/></symbol>
+    <symbol id="i-hands" viewBox="0 0 24 24"><path d="m8 12 3 3a2 2 0 0 0 3-3l-2-2m-4 2-2-2a2 2 0 0 0-3 3l5 6a4 4 0 0 0 6 0l5-6a2 2 0 0 0-3-3l-2 2M8 8l2-3 3 2 2-1 3 4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 6h15a2 2 0 0 1 2 2v11H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h13"/><path d="M21 11h-5a2 2 0 0 0 0 4h5"/><path d="M16 13h.01"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h3a4 4 0 0 0 4-4V10a4 4 0 0 1 4-4"/></symbol>
+    <symbol id="i-atom" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Zm7 12 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></symbol>
+  </svg>
 
   <!-- ══════════════════════════════════════ NAVBAR -->
   <nav class="navbar">
@@ -1772,8 +1971,7 @@
           </h1>
 
           <p class="hero__sub">
-            SabiData collecte des données audio crowdsourcées en langues nationales burkinabè.
-            Enregistrez, validez, transcrivez — et gagnez des récompenses réelles.
+            Une phrase, une voix, un souvenir : chaque contribution aide nos langues à trouver leur place dans le monde numérique. Partagez la vôtre, simplement, même sans connexion.
           </p>
 
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
@@ -1820,12 +2018,12 @@
                 <!-- Actions -->
                 <div class="pscreen__actions">
                   <div class="pscreen__action pscreen__action--primary">
-                    <span class="pscreen__action-icon">🎙</span>
+                    <span class="pscreen__action-icon"><svg class="icon"><use href="#i-mic"/></svg></span>
                     Parler
                     <span style="font-size:9px; opacity:0.8;">+150 pts</span>
                   </div>
                   <div class="pscreen__action pscreen__action--outline">
-                    <span class="pscreen__action-icon">✅</span>
+                    <span class="pscreen__action-icon"><svg class="icon"><use href="#i-check"/></svg></span>
                     Valider
                     <span style="font-size:9px; opacity:0.8;">+20 pts</span>
                   </div>
@@ -1834,7 +2032,7 @@
                 <!-- Daily goal -->
                 <div class="pscreen__card">
                   <div class="pscreen__row">
-                    <span class="pscreen__row-icon">🏁</span>
+                    <span class="pscreen__row-icon" style="color:var(--primary);"><svg class="icon"><use href="#i-target"/></svg></span>
                     <span style="flex:1; font-size:11px; font-weight:700;">Défi du jour</span>
                     <span style="font-size:12px; font-weight:800; color:var(--primary);">6/10</span>
                   </div>
@@ -1846,7 +2044,7 @@
                 <!-- Revenue -->
                 <div class="pscreen__card">
                   <div class="pscreen__row">
-                    <span class="pscreen__row-icon">💰</span>
+                    <span class="pscreen__row-icon" style="color:var(--green);"><svg class="icon"><use href="#i-wallet"/></svg></span>
                     <div>
                       <div style="font-size:11px; font-weight:700;">Revenus</div>
                       <div style="font-size:10px; color:var(--text-sec);">Orange Money · Wave</div>
@@ -1986,14 +2184,14 @@
 
           <div style="margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
             <div class="card" style="padding:16px; display:flex; align-items:center; gap:10px;">
-              <span style="font-size:20px;">✅</span>
+              <span style="font-size:20px; color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></span>
               <div>
                 <div style="font-weight:700; font-size:13px;">Validation</div>
                 <div style="font-size:11px; color:var(--text-sec);">+20 pts par clip</div>
               </div>
             </div>
             <div class="card" style="padding:16px; display:flex; align-items:center; gap:10px;">
-              <span style="font-size:20px;">📝</span>
+              <span style="font-size:20px; color:var(--blue);"><svg class="icon"><use href="#i-note"/></svg></span>
               <div>
                 <div style="font-weight:700; font-size:13px;">Transcription</div>
                 <div style="font-size:11px; color:var(--text-sec);">Clavier phonétique</div>
@@ -2017,42 +2215,42 @@
       <div class="features__grid">
 
         <div class="feature-card fade-up" style="--accent-color:var(--red);">
-          <div class="feature-icon" style="background:var(--red-soft);">🎙</div>
+          <div class="feature-icon" style="background:var(--red-soft); color:var(--red);"><svg class="icon"><use href="#i-mic"/></svg></div>
           <div class="feature-title">Enregistrement Audio</div>
           <div class="feature-desc">Enregistrez des clips audio avec détection d'amplitude en temps réel, forme d'onde animée et revue avant envoi. Chaque clip est horodaté et tagué à votre dialecte.</div>
           <div class="feature-tag chip--red">+150 pts/clip</div>
         </div>
 
         <div class="feature-card fade-up" style="--accent-color:var(--green); transition-delay:0.1s;">
-          <div class="feature-icon" style="background:var(--green-soft);">✅</div>
+          <div class="feature-icon" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></div>
           <div class="feature-title">Validation Pair-à-pair</div>
           <div class="feature-desc">Évaluez les enregistrements de la communauté : Oui / Non / Pas sûr. Le système de pair-review garantit la qualité des données sans équipe dédiée.</div>
           <div class="feature-tag chip--green">+20 pts/validation</div>
         </div>
 
         <div class="feature-card fade-up" style="--accent-color:var(--blue); transition-delay:0.2s;">
-          <div class="feature-icon" style="background:var(--blue-soft);">📝</div>
+          <div class="feature-icon" style="background:var(--blue-soft); color:var(--blue);"><svg class="icon"><use href="#i-note"/></svg></div>
           <div class="feature-title">Transcription</div>
           <div class="feature-desc">Transcrivez des clips audio en texte via un lecteur intégré (0.5× / 1× / 1.5×) et un clavier phonétique spécial incluant les caractères locaux : ɛ, ɔ, ŋ, tons.</div>
           <div class="feature-tag chip--blue">Clavier local</div>
         </div>
 
         <div class="feature-card fade-up" style="--accent-color:var(--primary); transition-delay:0.1s;">
-          <div class="feature-icon" style="background:var(--primary-soft);">📡</div>
+          <div class="feature-icon" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-signal"/></svg></div>
           <div class="feature-title">Offline-First</div>
           <div class="feature-desc">Travaillez sans connexion. Vos enregistrements sont stockés localement et synchronisés dès que le réseau revient. Une queue de synchronisation gère les envois en attente.</div>
           <div class="feature-tag chip--primary">Connexion faible OK</div>
         </div>
 
         <div class="feature-card fade-up" style="--accent-color:var(--primary); transition-delay:0.2s;">
-          <div class="feature-icon" style="background:var(--primary-soft);">🗺</div>
+          <div class="feature-icon" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-map"/></svg></div>
           <div class="feature-title">Carte des Dialectes</div>
           <div class="feature-desc">Visualisez la densité des contributions par région sur une carte du Burkina Faso. Repérez les zones sous-couvertes qui rapportent jusqu'à ×3 points bonus.</div>
           <div class="feature-tag chip--primary">Choroplèthe live</div>
         </div>
 
         <div class="feature-card fade-up" style="--accent-color:var(--green); transition-delay:0.3s;">
-          <div class="feature-icon" style="background:var(--green-soft);">💸</div>
+          <div class="feature-icon" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-wallet"/></svg></div>
           <div class="feature-title">Revenus Mobile Money</div>
           <div class="feature-desc">Convertissez vos points en FCFA et retirez via Orange Money, Moov Money ou Wave. L'historique complet de vos gains et retraits est disponible en temps réel.</div>
           <div class="feature-tag chip--green">Orange · Moov · Wave</div>
@@ -2074,28 +2272,28 @@
         <!-- Mobile app -->
         <div class="platform-card fade-up">
           <div class="platform-card__accent" style="background:linear-gradient(90deg,var(--primary),var(--red));"></div>
-          <div class="platform-card__icon">📱</div>
+          <div class="platform-card__icon" style="color:var(--primary);"><svg class="icon"><use href="#i-phone"/></svg></div>
           <div class="platform-card__title">Application Mobile</div>
           <div class="platform-card__sub">Flutter · Android · Offline-first<br/>Conçue pour les connexions lentes et les utilisateurs peu alphabétisés.</div>
           <div class="platform-card__features">
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Onboarding en 4 étapes — sélection langue, compétences, dialecte, région</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--red-soft); color:var(--red);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--red-soft); color:var(--red);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Module d'enregistrement avec détection d'amplitude en temps réel</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Validation pair-à-pair et transcription avec clavier phonétique</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Gamification : niveaux, classement, séries quotidiennes, récompenses</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Paiements Mobile Money (Orange, Moov, Wave) · Retraits FCFA</div>
             </div>
           </div>
@@ -2109,7 +2307,7 @@
         <!-- Admin console -->
         <div class="platform-card fade-up" style="transition-delay:0.15s;">
           <div class="platform-card__accent" style="background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-          <div class="platform-card__icon">🖥</div>
+          <div class="platform-card__icon" style="color:var(--blue);"><svg class="icon"><use href="#i-monitor"/></svg></div>
           <div class="platform-card__title">Console Admin</div>
           <div class="platform-card__sub">React + Vite + TypeScript · Vercel<br/>Interface sécurisée pour opérateurs et modérateurs.</div>
 
@@ -2121,12 +2319,12 @@
             </div>
             <div class="admin-body">
               <div class="admin-sidebar">
-                <div class="admin-nav-icon admin-nav-icon--active">📊</div>
-                <div class="admin-nav-icon">👥</div>
-                <div class="admin-nav-icon">⚖️</div>
-                <div class="admin-nav-icon">💰</div>
-                <div class="admin-nav-icon">🔍</div>
-                <div class="admin-nav-icon">📋</div>
+                <div class="admin-nav-icon admin-nav-icon--active" aria-label="Statistiques"><svg class="icon"><use href="#i-chart"/></svg></div>
+                <div class="admin-nav-icon" aria-label="Utilisateurs"><svg class="icon"><use href="#i-users"/></svg></div>
+                <div class="admin-nav-icon" aria-label="Arbitrage"><svg class="icon"><use href="#i-scale"/></svg></div>
+                <div class="admin-nav-icon" aria-label="Paiements"><svg class="icon"><use href="#i-money"/></svg></div>
+                <div class="admin-nav-icon" aria-label="Recherche"><svg class="icon"><use href="#i-search"/></svg></div>
+                <div class="admin-nav-icon" aria-label="Rapports"><svg class="icon"><use href="#i-list"/></svg></div>
               </div>
               <div class="admin-content">
                 <div class="admin-kpis">
@@ -2177,23 +2375,23 @@
 
           <div class="platform-card__features" style="margin-top:16px;">
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--blue-soft); color:var(--blue);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--blue-soft); color:var(--blue);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Gestion des utilisateurs : rôles, statuts, création, suspension, bannissement</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--red-soft); color:var(--red);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--red-soft); color:var(--red);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Arbitrage des litiges sur les enregistrements contestés</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>File qualité et validation manuelle des datasets</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Traitement des retraits FCFA et vue wallet globale</div>
             </div>
             <div class="platform-card__feature">
-              <div class="platform-card__feature-dot" style="background:var(--blue-soft); color:var(--blue);">✦</div>
+              <div class="platform-card__feature-dot" style="background:var(--blue-soft); color:var(--blue);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>Piste d'audit complète — toutes les actions admin horodatées</div>
             </div>
           </div>
@@ -2218,7 +2416,7 @@
 
       <div class="langs__cards">
         <div class="lang-card fade-up">
-          <div class="lang-flag">🌍</div>
+          <div class="lang-flag" aria-hidden="true"><svg class="icon"><use href="#i-globe"/></svg></div>
           <div class="lang-info">
             <div class="lang-name">Mooré</div>
             <div class="lang-spoken">≈ 7 millions de locuteurs · Peuple Mossi</div>
@@ -2232,7 +2430,7 @@
         </div>
 
         <div class="lang-card fade-up" style="transition-delay:0.1s;">
-          <div class="lang-flag">🌍</div>
+          <div class="lang-flag" aria-hidden="true"><svg class="icon"><use href="#i-globe"/></svg></div>
           <div class="lang-info">
             <div class="lang-name">Dioula</div>
             <div class="lang-spoken">≈ 3 millions de locuteurs · Langue de commerce</div>
@@ -2246,7 +2444,7 @@
         </div>
 
         <div class="lang-card fade-up" style="transition-delay:0.2s;">
-          <div class="lang-flag">🌍</div>
+          <div class="lang-flag" aria-hidden="true"><svg class="icon"><use href="#i-globe"/></svg></div>
           <div class="lang-info">
             <div class="lang-name">Fulfuldé</div>
             <div class="lang-spoken">≈ 1 million de locuteurs · Peuple Peul / Fulani</div>
@@ -2260,7 +2458,7 @@
         </div>
 
         <div class="lang-card fade-up" style="transition-delay:0.3s;">
-          <div class="lang-flag">🌍</div>
+          <div class="lang-flag" aria-hidden="true"><svg class="icon"><use href="#i-globe"/></svg></div>
           <div class="lang-info">
             <div class="lang-name">Gulmancema</div>
             <div class="lang-spoken">≈ 700 000 locuteurs · Peuple Gourmantché</div>
@@ -2276,7 +2474,7 @@
 
       <!-- Note sur la rareté -->
       <div class="card fade-up" style="border-left:4px solid var(--primary); display:flex; gap:16px; align-items:flex-start;">
-        <span style="font-size:28px; flex-shrink:0;">⭐</span>
+        <span style="font-size:28px; flex-shrink:0; color:var(--primary);"><svg class="icon"><use href="#i-star"/></svg></span>
         <div>
           <div style="font-family:var(--font-display); font-size:16px; font-weight:700; margin-bottom:6px;">Bonus de rareté dialectale</div>
           <div style="font-size:14px; color:var(--text-sec); line-height:1.6;">Les zones géographiques peu couvertes par les données audio existantes rapportent davantage de points. L'application détecte votre région et affiche un indicateur de rareté (⭐ à ⭐⭐⭐) pour vous guider vers les dialectes les plus précieux pour la recherche.</div>
@@ -2296,7 +2494,7 @@
 
           <div class="gamif__cards">
             <div class="gamif-card fade-up">
-              <div class="gamif-card__icon" style="background:var(--red-soft);">🎙</div>
+              <div class="gamif-card__icon" style="background:var(--red-soft); color:var(--red);"><svg class="icon"><use href="#i-mic"/></svg></div>
               <div>
                 <div class="gamif-card__title">Enregistrer une phrase</div>
                 <div class="gamif-card__desc">Lisez et enregistrez en votre langue maternelle</div>
@@ -2305,7 +2503,7 @@
             </div>
 
             <div class="gamif-card fade-up" style="transition-delay:0.1s;">
-              <div class="gamif-card__icon" style="background:var(--green-soft);">✅</div>
+              <div class="gamif-card__icon" style="background:var(--green-soft); color:var(--green);"><svg class="icon"><use href="#i-check"/></svg></div>
               <div>
                 <div class="gamif-card__title">Valider un enregistrement</div>
                 <div class="gamif-card__desc">Évaluez la qualité d'un clip de la communauté</div>
@@ -2314,7 +2512,7 @@
             </div>
 
             <div class="gamif-card fade-up" style="transition-delay:0.15s;">
-              <div class="gamif-card__icon" style="background:var(--blue-soft);">📝</div>
+              <div class="gamif-card__icon" style="background:var(--blue-soft); color:var(--blue);"><svg class="icon"><use href="#i-note"/></svg></div>
               <div>
                 <div class="gamif-card__title">Transcrire un clip</div>
                 <div class="gamif-card__desc">Convertissez un audio en texte phonétique</div>
@@ -2323,7 +2521,7 @@
             </div>
 
             <div class="gamif-card fade-up" style="transition-delay:0.2s;">
-              <div class="gamif-card__icon" style="background:var(--primary-soft);">🔥</div>
+              <div class="gamif-card__icon" style="background:var(--primary-soft); color:var(--primary);"><svg class="icon"><use href="#i-flame"/></svg></div>
               <div>
                 <div class="gamif-card__title">Série quotidienne</div>
                 <div class="gamif-card__desc">Contribuez chaque jour et maintenez votre série</div>
@@ -2332,7 +2530,7 @@
             </div>
 
             <div class="gamif-card fade-up" style="transition-delay:0.25s;">
-              <div class="gamif-card__icon" style="background:var(--red-soft);">⭐</div>
+              <div class="gamif-card__icon" style="background:var(--red-soft); color:var(--red);"><svg class="icon"><use href="#i-star"/></svg></div>
               <div>
                 <div class="gamif-card__title">Dialecte rare</div>
                 <div class="gamif-card__desc">Zones peu couvertes = multiplicateur de points</div>
@@ -2346,7 +2544,7 @@
         <div class="fade-up" style="transition-delay:0.2s;">
           <div class="leaderboard-mock">
             <div class="lb-header">
-              🏆 Classement
+              <div><svg class="icon"><use href="#i-trophy"/></svg>Classement</div>
               <span>Mis à jour ce matin</span>
             </div>
 
@@ -2361,7 +2559,7 @@
               </div>
               <!-- 1st -->
               <div class="lb-podium-item">
-                <div class="lb-rank lb-rank--1">👑 #1</div>
+                <div class="lb-rank lb-rank--1"><svg class="icon"><use href="#i-crown"/></svg> #1</div>
                 <div class="lb-avatar lb-avatar--1">A</div>
                 <div class="lb-name">Amadou K.</div>
                 <div class="lb-pts">3 580 pts</div>
@@ -2402,15 +2600,15 @@
           </div>
 
           <div class="card" style="margin-top:16px; padding:20px;">
-            <div style="font-family:var(--font-display); font-weight:700; margin-bottom:12px;">💰 Vos gains</div>
+            <div style="font-family:var(--font-display); font-weight:700; margin-bottom:12px; color:var(--green);"><svg class="icon"><use href="#i-wallet"/></svg> Vos gains</div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
               <span style="font-size:13px; color:var(--text-sec);">Solde disponible</span>
               <span style="font-family:var(--font-display); font-size:22px; font-weight:800; color:var(--green);">2 450 FCFA</span>
             </div>
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
-              <span class="chip" style="background:rgba(255,152,0,0.1); color:#FF9800; border:1px solid rgba(255,152,0,0.3);">📱 Orange Money</span>
+              <span class="chip" style="background:rgba(255,152,0,0.1); color:#FF9800; border:1px solid rgba(255,152,0,0.3);"><svg class="icon"><use href="#i-phone"/></svg> Orange Money</span>
               <span class="chip" style="background:rgba(0,150,136,0.1); color:#009688; border:1px solid rgba(0,150,136,0.3);">💫 Wave</span>
-              <span class="chip" style="background:rgba(96,125,139,0.1); color:#90A4AE; border:1px solid rgba(96,125,139,0.3);">📶 Moov</span>
+              <span class="chip" style="background:rgba(96,125,139,0.1); color:#71858e; border:1px solid rgba(96,125,139,0.3);"><svg class="icon"><use href="#i-signal"/></svg> Moov</span>
             </div>
           </div>
         </div>
@@ -2428,42 +2626,42 @@
 
       <div class="tech__grid">
         <div class="tech-card fade-up">
-          <div class="tech-card__icon">🐦</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-phone"/></svg></div>
           <div class="tech-card__name">Flutter 3.38+</div>
           <div class="tech-card__desc">Framework mobile cross-platform avec thème dark complet</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.1s;">
-          <div class="tech-card__icon">⚛️</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-atom"/></svg></div>
           <div class="tech-card__name">React + Vite</div>
           <div class="tech-card__desc">Console admin rapide et typée TypeScript</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.15s;">
-          <div class="tech-card__icon">🚀</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-route"/></svg></div>
           <div class="tech-card__name">Railway</div>
           <div class="tech-card__desc">Backend API déployé en production sur Railway</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.2s;">
-          <div class="tech-card__icon">▲</div>
+          <div class="tech-card__icon" style="font-size:28px; font-weight:800;">▲</div>
           <div class="tech-card__name">Vercel</div>
           <div class="tech-card__desc">Console admin hébergée avec proxy vers Railway</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.1s;">
-          <div class="tech-card__icon">🛣️</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-route"/></svg></div>
           <div class="tech-card__name">go_router</div>
           <div class="tech-card__desc">Navigation déclarative pour l'app Flutter</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.15s;">
-          <div class="tech-card__icon">🔒</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-lock"/></svg></div>
           <div class="tech-card__name">JWT + TOTP</div>
           <div class="tech-card__desc">Authentification sécurisée pour l'admin</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.2s;">
-          <div class="tech-card__icon">📶</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-signal"/></svg></div>
           <div class="tech-card__name">Offline Queue</div>
           <div class="tech-card__desc">Outbox local avec sync automatique au retour réseau</div>
         </div>
         <div class="tech-card fade-up" style="transition-delay:0.25s;">
-          <div class="tech-card__icon">🎨</div>
+          <div class="tech-card__icon"><svg class="icon"><use href="#i-spark"/></svg></div>
           <div class="tech-card__name">Design System</div>
           <div class="tech-card__desc">Tokens de couleur cohérents entre mobile et admin</div>
         </div>
@@ -2493,22 +2691,22 @@
         <div>
           <div class="about__values fade-up" style="margin-bottom:28px; transition-delay:0.1s;">
             <div class="about__value">
-              <div class="about__value-icon">🎯</div>
+          <div class="about__value-icon" style="color:var(--primary);"><svg class="icon"><use href="#i-target"/></svg></div>
               <div class="about__value-title">Mission</div>
               <div class="about__value-desc">Préserver le patrimoine linguistique burkinabè en créant des datasets audio de qualité</div>
             </div>
             <div class="about__value">
-              <div class="about__value-icon">🌍</div>
+              <div class="about__value-icon" style="color:var(--blue);"><svg class="icon"><use href="#i-globe"/></svg></div>
               <div class="about__value-title">Impact</div>
               <div class="about__value-desc">Rendre les langues nationales disponibles pour l'IA, la reconnaissance vocale et la recherche</div>
             </div>
             <div class="about__value">
-              <div class="about__value-icon">💡</div>
+              <div class="about__value-icon" style="color:var(--primary);"><svg class="icon"><use href="#i-bulb"/></svg></div>
               <div class="about__value-title">Innovation</div>
               <div class="about__value-desc">Gamification et Mobile Money pour motiver une participation durable à grande échelle</div>
             </div>
             <div class="about__value">
-              <div class="about__value-icon">🤝</div>
+              <div class="about__value-icon" style="color:var(--green);"><svg class="icon"><use href="#i-hands"/></svg></div>
               <div class="about__value-title">Inclusion</div>
               <div class="about__value-desc">Accessible hors-ligne, sans alphabétisation requise, dans 4 langues + dialectes</div>
             </div>
@@ -2517,7 +2715,7 @@
           <!-- Timeline -->
           <div class="timeline fade-up" style="transition-delay:0.2s;">
             <div class="timeline-item">
-              <div class="timeline-dot">📱</div>
+              <div class="timeline-dot" style="color:var(--primary);"><svg class="icon"><use href="#i-phone"/></svg></div>
               <div class="timeline-body">
                 <div class="timeline-label">Phase 1</div>
                 <div class="timeline-title">Application Mobile</div>
@@ -2525,7 +2723,7 @@
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">🖥</div>
+              <div class="timeline-dot" style="color:var(--blue);"><svg class="icon"><use href="#i-monitor"/></svg></div>
               <div class="timeline-body">
                 <div class="timeline-label">Phase 1</div>
                 <div class="timeline-title">Console Admin</div>
@@ -2533,7 +2731,7 @@
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">💰</div>
+              <div class="timeline-dot" style="color:var(--green);"><svg class="icon"><use href="#i-money"/></svg></div>
               <div class="timeline-body">
                 <div class="timeline-label">Phase 2</div>
                 <div class="timeline-title">Paiements Mobile Money</div>
@@ -2541,7 +2739,7 @@
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">🌐</div>
+              <div class="timeline-dot" style="color:var(--primary);"><svg class="icon"><use href="#i-globe"/></svg></div>
               <div class="timeline-body">
                 <div class="timeline-label">Phase 3</div>
                 <div class="timeline-title">Data Marketplace</div>
@@ -2693,7 +2891,7 @@
         </p>
         <div class="cta-section__btns">
           <a href="#how-it-works" class="btn btn--primary" style="font-size:16px; padding:16px 32px;">
-            🎙 Commencer à contribuer
+            <svg class="icon"><use href="#i-mic"/></svg> Commencer à contribuer
           </a>
           <a href="#features" class="btn btn--outline" style="font-size:16px; padding:16px 32px;">
             En savoir plus →
@@ -2760,11 +2958,11 @@
 
       <div class="footer__bottom">
         <div>© 2026 Team SabiData · Burkina Faso 🇧🇫</div>
-        <div style="font-size:12px; color:var(--text-muted);">Fait avec ❤ par Team SabiData · Pour préserver nos langues</div>
+        <div style="font-size:12px; color:var(--text-muted);">Fait par Team SabiData · Pour préserver nos langues</div>
         <div class="footer__langs">
           <span class="footer__lang">🇫🇷 FR</span>
-          <span class="footer__lang">🌍 Mooré</span>
-          <span class="footer__lang">🌍 Dioula</span>
+          <span class="footer__lang"><svg class="icon"><use href="#i-globe"/></svg> Mooré</span>
+          <span class="footer__lang"><svg class="icon"><use href="#i-globe"/></svg> Dioula</span>
         </div>
       </div>
     </div>
@@ -2813,7 +3011,7 @@
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
-        navbar.style.borderBottomColor = 'rgba(30,40,64,0.8)';
+        navbar.style.borderBottomColor = 'rgba(71,57,37,0.16)';
       } else {
         navbar.style.borderBottomColor = 'var(--border)';
       }
